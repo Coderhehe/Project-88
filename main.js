@@ -64,6 +64,9 @@ function mykeydown(e) {
     }
     if (keypress=="38") {
         up(); }
+        if (keypress=="40") {
+            down();
+        }
         
         if (keypress=="39") {
             right();
@@ -92,7 +95,7 @@ function mykeydown(e) {
     
     function left() {
         if (plx>=0) {
-            plx=plrx-bw;
+            plx=plx-bw;
             console.log("X ="+plx+"Y =" +ply);
             canvas.remove(player_object);
         player_update();
@@ -100,8 +103,8 @@ function mykeydown(e) {
     }
     
     function right() {
-        if (plx<=850) {
-            plrx=plx+bw;
+        if (plx<=860) {
+            plx=plx+bw;
             console.log("X ="+plx+"Y =" +ply);
             canvas.remove(player_object);
         player_update();
